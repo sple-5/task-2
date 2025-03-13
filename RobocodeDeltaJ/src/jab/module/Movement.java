@@ -1,4 +1,6 @@
-package jab.module; 
+package jab.module;
+
+import robocode.Event;
 
 /**
  * Movement
@@ -19,6 +21,9 @@ public  class  Movement  extends Part {
 	
 
 	public void move() {
+	}
+	
+	public void listen(Event e) {
 	}
 
 

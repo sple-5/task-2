@@ -1,5 +1,7 @@
 package jab.module;
 
+import robocode.Event;
+
 /**
  * Movement
  * 
@@ -16,6 +18,12 @@ public class Movement extends Part {
 	public void move() {
 		bot.setMaxVelocity(8);
 		bot.setAhead(10000);
+	}
+
+	public void listen(Event e) {
+		if (e instanceof robocode.HitWallEvent) {
+			bot.setTurnRight(45);
+		}
 	}
 
 }

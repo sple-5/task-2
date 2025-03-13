@@ -6,6 +6,12 @@ delta AutoMovement {
             bot.setMaxVelocity(8);
             bot.setAhead(10000);
         } 
+        
+        modifies listen(Event e) {
+            if (e instanceof robocode.HitWallEvent) {
+			bot.setTurnRight(45);
+		}
+        }
     }
 
 }
