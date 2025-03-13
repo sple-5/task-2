@@ -9,8 +9,9 @@
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Movement">
-        <groups maxCardinality="1">
+        <groups maxCardinality="2">
           <features maxCardinality="1" name="NoMovement"/>
+          <features maxCardinality="1" name="AutoMovement"/>
         </groups>
       </features>
     </groups>

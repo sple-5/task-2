@@ -1,0 +1,11 @@
+delta AutoMovement {    
+
+    modifies jab.module.Movement {
+    
+        modifies move() {
+            bot.setMaxVelocity(8);
+            bot.setAhead(10000);
+        } 
+    }
+
+}
