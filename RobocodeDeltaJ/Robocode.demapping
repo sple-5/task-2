@@ -6,3 +6,9 @@ SpinningRadar:
 
 AutoMovement:
 <decore/AutoMovement.decore>
+
+LineMovement:
+<decore/LineMovement.decore>
+
+CorneringMovement:
+<decore/CorneringMovement.decore>

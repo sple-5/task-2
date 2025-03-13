@@ -1,0 +1,17 @@
+delta LineMovement requires AutoMovement{   
+     modifies jab.module.Movement {
+
+        adds int moveDirection = 1;
+
+        modifies move() {
+            bot.setMaxVelocity(8);
+            bot.setAhead(10000 * moveDirection);
+        } 
+        
+        modifies listen(robocode.Event e) {
+            if (e instanceof robocode.HitWallEvent) {
+                moveDirection *= -1;
+            }
+        }
+    }
+}

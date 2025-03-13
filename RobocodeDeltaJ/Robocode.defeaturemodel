@@ -11,7 +11,12 @@
       <features minCardinality="1" maxCardinality="1" name="Movement">
         <groups maxCardinality="2">
           <features maxCardinality="1" name="NoMovement"/>
-          <features maxCardinality="1" name="AutoMovement"/>
+          <features maxCardinality="1" name="AutoMovement">
+            <groups minCardinality="1" maxCardinality="1">
+              <features maxCardinality="1" name="LineMovement"/>
+              <features maxCardinality="1" name="CorneringMovement"/>
+            </groups>
+          </features>
         </groups>
       </features>
     </groups>
