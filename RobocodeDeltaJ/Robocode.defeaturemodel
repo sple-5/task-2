@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<feature:DEFeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:feature="http://deltaecore.org/feature/1.0">
+  <rootFeature minCardinality="1" maxCardinality="1" name="Module">
+    <groups minCardinality="2" maxCardinality="2">
+      <features minCardinality="1" maxCardinality="1" name="Radar">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="SpinningRadar"/>
+          <features maxCardinality="1" name="MouseRadar"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Movement">
+        <groups maxCardinality="1">
+          <features maxCardinality="1" name="NoMovement"/>
+        </groups>
+      </features>
+    </groups>
+  </rootFeature>
+</feature:DEFeatureModel>
