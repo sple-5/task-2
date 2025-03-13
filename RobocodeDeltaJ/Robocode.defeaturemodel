@@ -17,6 +17,7 @@
               <features maxCardinality="1" name="CorneringMovement"/>
             </groups>
           </features>
+          <features maxCardinality="1" name="KeyboardMovement"/>
         </groups>
       </features>
     </groups>

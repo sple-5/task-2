@@ -12,3 +12,6 @@ LineMovement:
 
 CorneringMovement:
 <decore/CorneringMovement.decore>
+
+KeyboardMovement:
+<decore/KeyboardMovement.decore>
