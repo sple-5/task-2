@@ -1,5 +1,8 @@
 package jab.module; 
 
+import java.awt.Graphics2D;
+import java.awt.event.InputEvent;
+
 /**
  * Targeting
  * 
@@ -19,6 +22,12 @@ public  class  Targeting  extends Part {
 	
 
 	public void target() {
+	}
+	
+	public void onPaint(Graphics2D g) {
+	}
+	
+	public void listenInput(InputEvent e) {
 	}
 
 

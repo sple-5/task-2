@@ -33,3 +33,13 @@ MouseClickGun:
 
 NoFireGun:
 <decore/NoFireGun.decore>
+
+
+HeadOnTargeting:
+<decore/HeadOnTargeting.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+MouseTargeting:
+<decore/MouseTargeting.decore>

@@ -1,0 +1,35 @@
+delta MouseTargeting {
+    modifies jab.module.Targeting {
+    	adds import robocode.util.Utils;
+    	adds import java.awt.Color;
+		adds import java.awt.Graphics2D;
+		adds import java.awt.event.InputEvent;
+		adds import java.awt.event.MouseEvent;
+		
+		adds int aimX;
+		adds int aimY;
+		
+        modifies target() {
+            double angle = Utils.normalAbsoluteAngle(
+                Math.atan2(aimX - bot.getX(), aimY - bot.getY())
+            );
+            bot.setTurnGunRightRadians(
+                Utils.normalRelativeAngle(angle - bot.getGunHeadingRadians())
+            );
+        }
+        
+        modifies listenInput(InputEvent e) {
+            if (e instanceof MouseEvent) {
+                aimX = ((MouseEvent)e).getX();
+                aimY = ((MouseEvent)e).getY();
+            }
+        }
+        
+        modifies onPaint(Graphics2D g) {
+            g.setColor(Color.RED);
+            g.drawOval(aimX - 15, aimY - 15, 30, 30);
+            g.drawLine(aimX, aimY - 4, aimX, aimY + 4);
+            g.drawLine(aimX - 4, aimY, aimX + 4, aimY);
+        }
+    }
+}
