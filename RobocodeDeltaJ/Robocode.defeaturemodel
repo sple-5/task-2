@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <feature:DEFeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:feature="http://deltaecore.org/feature/1.0">
   <rootFeature minCardinality="1" maxCardinality="1" name="Module">
-    <groups minCardinality="3" maxCardinality="3">
+    <groups minCardinality="5" maxCardinality="5">
       <features minCardinality="1" maxCardinality="1" name="Radar">
         <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="SpinningRadar"/>
@@ -18,6 +18,20 @@
             </groups>
           </features>
           <features maxCardinality="1" name="KeyboardMovement"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="ClosestSelectEnemy"/>
+          <features maxCardinality="1" name="WeakestSelectEnemy"/>
+          <features maxCardinality="1" name="StrongestSelectEnemy"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Gun">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="MaximumPowerGun"/>
+          <features maxCardinality="1" name="MouseClickGun"/>
+          <features maxCardinality="1" name="NoFireGun"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Targeting">
