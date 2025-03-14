@@ -1,0 +1,24 @@
+delta ClosestSelectEnemy {
+
+	modifies jab.module.SelectEnemy {
+	
+		adds import java.util.Iterator;
+		adds import jab.module.BotInfo;
+		
+		modifies select() {
+			Iterator<BotInfo> iterator = bot.botsInfo.values().iterator();
+			double minDistance = Double.MAX_VALUE;
+			BotInfo selected = null;
+			while (iterator.hasNext()) {
+				BotInfo botInfo = iterator.next();
+				if ((!botInfo.teammate) && minDistance > botInfo.distance) {
+					selected = botInfo;
+					minDistance = botInfo.distance;
+				}
+			}
+			bot.enemy = selected;
+		}
+		
+	}
+	
+}
