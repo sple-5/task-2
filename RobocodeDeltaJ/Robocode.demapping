@@ -10,5 +10,11 @@ AutoMovement:
 LineMovement:
 <decore/LineMovement.decore>
 
-CorneringMovement:
-<decore/CorneringMovement.decore>
+HeadOnTargeting:
+<decore/HeadOnTargeting.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+MouseTargeting:
+<decore/MouseTargeting.decore>
