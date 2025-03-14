@@ -15,3 +15,12 @@ CorneringMovement:
 
 KeyboardMovement:
 <decore/KeyboardMovement.decore>
+
+HeadOnTargeting:
+<decore/HeadOnTargeting.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+MouseTargeting:
+<decore/MouseTargeting.decore>
