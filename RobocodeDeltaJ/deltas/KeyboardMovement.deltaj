@@ -1,0 +1,58 @@
+delta KeyboardMovement requires AutoMovement {    
+
+    modifies jab.module.Movement {
+        
+        adds int moveDirection = 0;
+        adds int turnDirection = 0;
+        adds boolean isMoving = false;
+
+        modifies move() {
+            bot.setAhead(Double.POSITIVE_INFINITY * moveDirection);
+            bot.setTurnRight(45 * turnDirection);
+            bot.execute();
+        }
+
+        modifies listenInput(java.awt.event.InputEvent e) {
+            if (e instanceof java.awt.event.KeyEvent) {
+                int keyID = ((java.awt.event.KeyEvent) e).getID();
+                int keyCode = ((java.awt.event.KeyEvent) e).getKeyCode();
+        
+                if (keyID == 401) { // 401 = KeyEvent.KEY_PRESSED
+                    switch (keyCode) {
+                        case 38: // VK_UP
+                            moveDirection = 1;
+                            isMoving = true;
+                            break;
+                        case 40: // VK_DOWN
+                            moveDirection = -1;
+                            isMoving = true;
+                            break;
+                        case 39: // VK_RIGHT
+                            turnDirection = 1;
+                            break;
+                        case 37: // VK_LEFT
+                            turnDirection = -1;
+                            break;
+                    }
+                    move();
+                } 
+                
+                else if (keyID == 402) { // 402 = KeyEvent.KEY_RELEASED
+                    switch (keyCode) {
+                        case 38: // VK_UP
+                        case 40: // VK_DOWN
+                            moveDirection = 0;
+                            isMoving = false;
+                            bot.setAhead(0); 
+                            break;
+                        case 39: // VK_RIGHT
+                        case 37: // VK_LEFT
+                            turnDirection = 0;
+                            break;
+                    }
+                    move();
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,12 @@ AutoMovement:
 LineMovement:
 <decore/LineMovement.decore>
 
+CorneringMovement:
+<decore/CorneringMovement.decore>
+
+KeyboardMovement:
+<decore/KeyboardMovement.decore>
+
 HeadOnTargeting:
 <decore/HeadOnTargeting.decore>
 
